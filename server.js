@@ -19,18 +19,18 @@ app.all("*", (req, res, next) => {
 
 app.get("/download", (req, res) => {
   try {
-    const filepath = __dirname + "/public/测试编码是否正常.pdf";
+    const filepath = __dirname + "/public/测试.pdf";
     fs.readFile(filepath, (err, data) => {
-        // res.writeHead(200, {
-        //   "Content-Type": "application/octet-stream",
-        //   "Content-Disposition": `attachment; filename*=UTF-8''${encodeURIComponent(
-        //     "测试编码是否正常.pdf"
-        //   )}`,
-        // });
+      // res.writeHead(200, {
+      //   "Content-Type": "application/octet-stream",
+      //   "Content-Disposition": `attachment; filename*=UTF-8''${encodeURIComponent(
+      //     "测试.pdf"
+      //   )}`,
+      // });
       res.writeHead(200, {
         "Content-Type": "application/octet-stream",
         "Content-Disposition": `attachment; filename=${encodeURIComponent(
-          "测试编码是否正常.pdf"
+          "测试.pdf"
         )}`,
       });
       res.end(data);

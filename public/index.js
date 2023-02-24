@@ -3,6 +3,7 @@ downloadDom.addEventListener("click", () => {
   file({
     url: `/download`,
     responseType: "arraybuffer",
+    params: { random: Math.random() },
   });
 });
 
@@ -10,9 +11,9 @@ async function file(config) {
   const response = await axios.request(config);
   const url = window.URL.createObjectURL(new Blob([response.data]));
   const contentDisposition = response.headers["content-disposition"];
-  console.log(contentDisposition);
-//   const filenameDes = "filename*=UTF-8''";
+  //   const filenameDes = "filename*=UTF-8''";
   const filenameDes = "filename=";
+  console.log(contentDisposition, contentDisposition.indexOf(filenameDes));
   const rawFilename = contentDisposition.substr(
     contentDisposition.indexOf(filenameDes) + filenameDes.length
   );
