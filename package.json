@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --watch public ./server.js",
+    "start": "nodemon ./server.js",
+    "electron:generate-icons": "electron-icon-builder --input=./public/test.png --output=build --flatten",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,7 +19,11 @@
   },
   "homepage": "https://github.com/biology-w/filename-test-server#readme",
   "dependencies": {
+    "body-parser": "1.20.2",
     "express": "^4.18.2",
-    "nodemon": "^2.0.20"
+    "multer": "1.4.5-lts.1",
+    "multiparty": "4.2.3",
+    "nodemon": "^2.0.20",
+    "serve-index": "1.9.1"
   }
 }
