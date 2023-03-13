@@ -56,6 +56,10 @@ app.post("/fileUpload", multer({ dest: "./tmp/" }).any(), function (req, res) {
   }
   let completeCount = 0;
   files.forEach((file) => {
+    if (!fs.existsSync(`files/${body.platform}`)) {
+      fs.mkdirSync(`files/${body.platform}`);
+    }
+
     if (!fs.existsSync(`files/${body.platform}/${body.version}`)) {
       fs.mkdirSync(`files/${body.platform}/${body.version}`);
     }
