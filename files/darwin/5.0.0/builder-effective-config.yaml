@@ -2,7 +2,7 @@ directories:
   output: release/build
   buildResources: assets
   app: release/app
-productName: DmClient-dev
+productName: DmClient
 appId: com.innodealing.DmClient
 asar: true
 asarUnpack: '**\*.{node,dll}'
@@ -11,6 +11,8 @@ files:
       - dist
       - node_modules
       - package.json
+releaseInfo:
+  releaseNotesFile: release.md
 publish:
   - provider: generic
     url: ''
@@ -36,22 +38,24 @@ dmg:
       type: link
       path: /Applications
 win:
+  icon: assets/icon.ico
+  publisherName: 上海寰擎信息科技有限公司
   target:
     target: nsis
     arch:
-      - x64
       - ia32
+  certificateSubjectName: CN=上海寰擎信息科技有限公司, O=上海寰擎信息科技有限公司, S=上海市, C=CN
 nsis:
   oneClick: false
   language: '2052'
   perMachine: true
   allowToChangeInstallationDirectory: true
-  artifactName: ${productName}-Setup-${arch}-${version}.${ext}
+  artifactName: ${productName}Setup-${version}.${ext}
 linux:
   target:
     - AppImage
   category: Development
-  artifactName: ${productName}-${platform}-${arch}-${version}.${ext}
+  artifactName: ${productName}-${platform}-${version}.${ext}
 extraResources:
   - filter:
       - ./assets/**

@@ -1,0 +1,9 @@
+version: 5.0.0
+files:
+  - url: DmClientSetup-5.0.0.exe
+    sha512: XxbFNtQpqrzLtbS3APfDLWoNXv/GkqvOBQdod/KZAFQET2a7euDeIl1zvkUazL8/cKMPjSCb8aj8mU+rhQMIkQ==
+    size: 67227168
+path: DmClientSetup-5.0.0.exe
+sha512: XxbFNtQpqrzLtbS3APfDLWoNXv/GkqvOBQdod/KZAFQET2a7euDeIl1zvkUazL8/cKMPjSCb8aj8mU+rhQMIkQ==
+releaseNotes: ''
+releaseDate: '2023-03-15T09:04:31.547Z'

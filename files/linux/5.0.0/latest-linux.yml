@@ -1,0 +1,10 @@
+version: 5.0.0
+files:
+  - url: DmClient-linux-5.0.0.AppImage
+    sha512: nuetQgtNJ1OWT0Igeo5cY5jdtBwAMJthodkGYcJyO11NXu7WvY3m6ymI3HqeoGdvN3VqMVv+sZxIdCUIi+b7Hg==
+    size: 97594815
+    blockMapSize: 101843
+path: DmClient-linux-5.0.0.AppImage
+sha512: nuetQgtNJ1OWT0Igeo5cY5jdtBwAMJthodkGYcJyO11NXu7WvY3m6ymI3HqeoGdvN3VqMVv+sZxIdCUIi+b7Hg==
+releaseNotes: ''
+releaseDate: '2023-03-15T06:38:41.006Z'

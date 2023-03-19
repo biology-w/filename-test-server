@@ -9,7 +9,7 @@ const app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use("/files", serveIndex("files"));
-app.use(express.static("./files"));
+app.use("/files", express.static("./files"));
 
 app.use("/upload", express.static("./upload"));
 

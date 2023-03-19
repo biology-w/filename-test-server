@@ -1,0 +1,18 @@
+version: 5.0.0
+files:
+  - url: DmClient-5.0.0-arm64-mac.zip
+    sha512: VB8tOhLgUb9Xd9qiQbUEhcDWNxnHUm5bGkxwNv1k7/OoUivfYOXdL9FrcBouzRmyKDbwVIHfJA8Kt6g9KNSOmg==
+    size: 86944091
+  - url: DmClient-5.0.0-mac.zip
+    sha512: d1g7hGGs4awcjZRBlI0o8CY05F/jzvh9nHFqPQmwWeM0AJY9Q7B+GI2ayhqlyuX6UIAFZk60SS2qtDCwhagHbw==
+    size: 92812926
+  - url: DmClient-darwin-5.0.0.dmg
+    sha512: RWjRNVb4A09B7WvjDqRlwXDyJcgniXdlgv/bdoaGcqqwY6kOVU+feZDiOb76CN4jVAjpL15NMeISzz3/j6jIhA==
+    size: 90907090
+  - url: DmClient-darwin-5.0.0.dmg
+    sha512: Se8BLXh8ipgxNgTPf7Jq2i9+T2e0p4mEfTSJuhwSCknaGlvIscSYWsBzDaBYhfN7YdXdMyu4AVCb30nDiNY7yw==
+    size: 96731588
+path: DmClient-5.0.0-arm64-mac.zip
+sha512: VB8tOhLgUb9Xd9qiQbUEhcDWNxnHUm5bGkxwNv1k7/OoUivfYOXdL9FrcBouzRmyKDbwVIHfJA8Kt6g9KNSOmg==
+releaseNotes: ''
+releaseDate: '2023-03-15T10:35:12.205Z'

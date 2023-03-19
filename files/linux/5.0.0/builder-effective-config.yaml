@@ -1,0 +1,61 @@
+directories:
+  output: release/build
+  buildResources: assets
+  app: release/app
+productName: DmClient
+appId: com.innodealing.DmClient
+asar: true
+asarUnpack: '**\*.{node,dll}'
+files:
+  - filter:
+      - dist
+      - node_modules
+      - package.json
+releaseInfo:
+  releaseNotesFile: release.md
+publish:
+  - provider: generic
+    url: ''
+afterSign: .erb/scripts/notarize.js
+mac:
+  target:
+    target: default
+    arch:
+      - arm64
+      - x64
+  type: distribution
+  hardenedRuntime: true
+  entitlements: assets/entitlements.mac.plist
+  entitlementsInherit: assets/entitlements.mac.plist
+  gatekeeperAssess: false
+dmg:
+  artifactName: ${productName}-${platform}-${version}.${ext}
+  contents:
+    - x: 130
+      'y': 220
+    - x: 410
+      'y': 220
+      type: link
+      path: /Applications
+win:
+  icon: assets/icon.ico
+  publisherName: 上海寰擎信息科技有限公司
+  target:
+    target: nsis
+    arch:
+      - ia32
+nsis:
+  oneClick: false
+  language: '2052'
+  perMachine: true
+  allowToChangeInstallationDirectory: true
+  artifactName: ${productName}Setup-${version}.${ext}
+linux:
+  target:
+    - AppImage
+  category: Development
+  artifactName: ${productName}-${platform}-${version}.${ext}
+extraResources:
+  - filter:
+      - ./assets/**
+electronVersion: 22.0.0
